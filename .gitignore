@@ -1,2 +1,4 @@
 OpenSAE.sublime-workspace
 OpenSAE.sublime-project
+.DS_Store
+application/config/database.php

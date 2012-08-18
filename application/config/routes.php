@@ -41,5 +41,7 @@
 $route['default_controller'] = "servicios/sesion";
 $route['404_override'] = '';
 
+$route['index'] = "servicios/sesion";
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

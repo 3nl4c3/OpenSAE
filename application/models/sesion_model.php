@@ -78,7 +78,7 @@ class Sesion_Model extends CI_Model {
     	else
         {
             $this->session->set_flashdata('mensaje_temporal', $sin_permiso_mensaje);
-            redirect($esta_logueado_redirect);
+            redirect($sin_permiso_redirect);
             exit($sin_permiso_mensaje);
         }
     }

@@ -13,20 +13,6 @@ class Sesion extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('sesion_model');
-	}
-
-	/**
-	 * 
-	 */
-	public function index()
-	{
-		if ($this->session->userdata('easo_logged_IN'))
-		{
-			exit();
-		}
-		//Página de formulario para iniciar sesión
-		$this->load->view('servicios/sesion/login_form');
 	}
 
 	/**
@@ -35,10 +21,7 @@ class Sesion extends CI_Controller {
 	 */
 	public function login()
 	{
-		if ($this->session->userdata('easo_logged_IN'))
-		{
-			exit();
-		}
+		$this->sesion_model->no_esta_logueado();
 		$this->load->library('form_validation');
 		$this->load->helper('text');
 
@@ -63,10 +46,11 @@ class Sesion extends CI_Controller {
                );
 
 				$this->session->set_userdata($datos_sesion);
+				redirect('index');
 			}
 			else
 			{
-				redirect('servicios/sesion/login');
+				redirect('iniciar-sesion');
 			}
 		}
 	}
@@ -88,5 +72,5 @@ class Sesion extends CI_Controller {
 	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file sesion.php */
+/* Location: ./application/controllers/servicios/sesion.php */

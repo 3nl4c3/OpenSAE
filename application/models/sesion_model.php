@@ -6,7 +6,7 @@
  * @package     OpenSAE
  * @subpackage  autentificación
  * @license     http://opensource.org/licenses/gpl-3.0.html GNU Public License
- * @version     1.0.0
+ * @version     1.0.1
  */
 class Sesion_Model extends CI_Model {
 
@@ -69,7 +69,7 @@ class Sesion_Model extends CI_Model {
      * @return void
      * @since  1.0.0
      */
-    public function genera_permisos($sin_permiso_redirect = 'servicios/sesion/login', $sin_permiso_mensaje = 'Es necesario que inicie sesión para entrar a esta área')
+    public function genera_permisos($sin_permiso_redirect = 'iniciar-sesion', $sin_permiso_mensaje = 'Es necesario que inicie sesión para entrar a esta área')
     {
     	if ($this->en_sesion == TRUE)
     	{

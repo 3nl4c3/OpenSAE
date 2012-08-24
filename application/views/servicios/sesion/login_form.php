@@ -7,7 +7,7 @@
 
 <body>
 	<?=validation_errors()?>
-	<?=form_open('servicios/sesion/login');?>
+	<?=form_open('iniciar-sesion');?>
 		<fieldset>
 			<label for="usuario">Correo electrónico:</label>
 			<input type="text" name="usuario" id="usuario"/>

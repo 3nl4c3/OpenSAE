@@ -38,10 +38,12 @@
 |
 */
 
-$route['default_controller'] = "servicios/sesion";
+$route['default_controller'] = "autentificado/panel";
 $route['404_override'] = '';
 
-$route['index'] = "servicios/sesion";
+$route['index'] = "autentificado/panel";
+
+$route['iniciar-sesion'] = "servicios/sesion/login";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
